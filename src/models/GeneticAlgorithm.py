@@ -114,6 +114,7 @@ class GeneticAlgorithmFS:
 
     def evolve_population(self):
         # Main loop for evolving the population through selection, crossover, and mutation
+        print("Started Evolve")
         new_population = self.selection()
         for i in range(0, len(new_population), 2):
             parent1 = new_population[i]
