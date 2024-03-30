@@ -114,7 +114,7 @@ class GeneticAlgorithmFS:
 
     def evolve_population(self):
         # Main loop for evolving the population through selection, crossover, and mutation
-        print("Started Evolve")
+        # print("Started Evolve")
         new_population = self.selection()
         for i in range(0, len(new_population), 2):
             parent1 = new_population[i]
@@ -155,12 +155,12 @@ class GeneticAlgorithmFS:
             
             # Finding the best individual of the current generation
             # Calculate fitness for each individual in the population
-            print("Getting fitness score for all population")
+            # print("Getting fitness score for all population")
             fitness_scores = [self.calculate_fitness(individual) for individual in self.population]
 
             # Find the index of the individual with the best fitness
             best_index = np.argmax(fitness_scores)
-            print("Done")
+            # print("Done")
             # Retrieve the best individual and its fitness using the best index
             best_of_generation = self.population[best_index]
             best_fitness = fitness_scores[best_index]

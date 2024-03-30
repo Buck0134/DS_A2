@@ -34,7 +34,9 @@ def task1_evaluate_models(df, target_column, max_features):
     }
 
     feature_range = range(1, max_features + 1)
-    
+    print("\033[32m"+ "_______________________________________________________"+ "\033[0m")
+    print("\033[32m"+ f"Generating Result for sklearn built-in model with both Random Forest and Neural Network"+ "\033[0m")
+    print("\033[32m"+"See estimated finish time for this round below: \n"+ "\033[0m")
     for n_features in tqdm(feature_range, desc='Training models'):
         # Random Forest with feature selection
         start_time = time.time()

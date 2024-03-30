@@ -15,10 +15,10 @@ for i in range(1, 12):
 
 combined_df = pd.concat(dfs, ignore_index=True)
 dependent_variable = "SE Process grade"
-generations_list = [10, 30]
-# generations_list = [10, 30, 50, 80, 100]
+# generations_list = [10, 30]
+generations_list = [10, 30, 50, 80, 100]
 # model_choices = ['RFModelWithFeatureSelection', 'NeuralNetwork']  # Added 'NNModel' to the list of models
-model_choices = ['NeuralNetwork']  # Added 'NNModel' to the list of models
+model_choices = ['RFModelWithFeatureSelection']  # Added 'NNModel' to the list of models
 metrics = {model: {"generations": [], "num_features": [], "speed": [], "f1": []} for model in model_choices}
 
 for model_choice in model_choices:
